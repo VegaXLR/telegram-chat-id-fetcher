@@ -4,12 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Telegram Chat ID Fetcher</title>
+
+  <!-- Google Font for a modern look -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset some default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #74b9ff, #0984e3);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #0984e3;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #74b9ff;
+    }
+
+    pre {
+      margin-top: 20px;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      text-align: left;
+    }
+  </style>
 </head>
 <body>
-  <h2>Get Your Telegram Chat ID</h2>
-  <input type="text" id="token" placeholder="Enter your bot token">
-  <button onclick="getChatID()">Get Chat ID</button>
-  <pre id="result"></pre>
+  <div class="container">
+    <h2>Get Your Telegram Chat ID</h2>
+    <input type="text" id="token" placeholder="Enter your bot token">
+    <button onclick="getChatID()">Get Chat ID</button>
+    <pre id="result">Your chat ID will appear here...</pre>
+  </div>
 
   <script>
     async function getChatID() {
